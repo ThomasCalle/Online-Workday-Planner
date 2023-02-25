@@ -58,7 +58,7 @@ The following animation demonstrates the application functionality:
 ## Usage Instructions
 
 ## Solution URL:
-[Solution URL Link:](
+[Solution URL Link:](https://thomascalle.github.io/Online-Workday-Planner/)
 
 ## YouTube Walkthrough Video:
 [Click Here to Watch]
@@ -73,7 +73,10 @@ The following animation demonstrates the application functionality:
 
 ## Built With
 - Saiyan Pride
+- HTML & CSS
 - Dynamic JavaScript
+- Day.js[Day.js](https://day.js.org/en/)
+- jQuery: [jQuery](https://jquery.com/)
 - License Badge: [Shields.io](https://shields.io/)
 - Visual Studio Code: [Website](https://code.visualstudio.com/)
 
