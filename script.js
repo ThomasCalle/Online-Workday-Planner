@@ -1,6 +1,64 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+const localeSettings = {};
+dayjs.locale(localeSettings);
+
+$(function () {
+  hourlyColor();
+  textEntry();
+
+      // Initialize the jQuery File Upload plugin
+      function hourlyColor() {
+        $('.time-block').each(function() {
+          const blockHour = parseInt(this.id);
+          $(this).toggleClass('past', blockHour < currentHour);
+          $(this).toggleClass('present', blockHour === currentHour);
+          $(this).toggleClass('future', blockHour > currentHour);
+        });
+      }
+        
+     
+  function hourlyColor() {
+    $('.time-block').each(function(){
+
+      if (this.id == currentHour) {
+        $(this).removeClass('past future').addClass('present');
+      }else if (this.id < currentHour){
+        $(this).removeClass('future present').addClass('past');
+      }else {
+        $(this).removeClass('past present').addClass('future');
+      }
+      
+      if (currentHour > 17 || currentHour < 9) {
+        $(this).removeClass('past present').addClass('future');
+      }
+    })
+  }
+
+
+
+
+  function refreshColor() {
+    $('.time-block').each(function(){
+
+      if (this.id == currentHour) {
+        $(this).removeClass('past future').addClass('present');
+      }else if (this.id < currentHour){
+        $(this).removeClass('future present').addClass('past');
+      }else {
+        $(this).removeClass('past present').addClass('future');
+      }
+      
+      if (currentHour > 17 || currentHour < 9) {
+        $(this).removeClass('past present').addClass('future');
+      }
+    })
+  }
+  }
+
+
+
 
   // Initialize the jQuery File Upload plugin 
     // TODO: Add a listener for click events on the save button. This code should
