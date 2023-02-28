@@ -36,9 +36,6 @@
         } else {
           $(this).removeClass('past present').addClass('future');
         }
-        if (currentHour > 17 || currentHour < 9) {
-          $(this).removeClass('past present').addClass('future');
-        }
       });
     }
     // This will get the user input from the localStorage and set textarea values for each time block.
